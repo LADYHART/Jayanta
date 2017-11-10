@@ -1,5 +1,5 @@
 <?php $yourname=""; 
-  $yourname = $_POST["yourname"];
+  $yourname = !empty($_POST["yourname"])?  $_POST["yourname"] : "";
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 <br/>
  <?php if(!empty($yourname)) { ?>
   <h3>Welcome Mr. <?=$yourname ?>
-  <?php }>
+  <?php } ?>
 </form>	
 </body>
 </html>
